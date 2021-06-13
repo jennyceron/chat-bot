@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-27ba4": {
+      "hosting": {
+        "chatbot": [
+          "login-27ba4"
+        ]
+      }
+    }
+  }
+}

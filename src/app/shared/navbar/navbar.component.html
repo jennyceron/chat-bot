@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">CHAT BOT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+
+
+            <ul class="navbar-nav me-auto" *ngIf="user$ | async as user; else login">
+
+                <li class="nav-item" *ngIf="user">
+                    <a class="nav-link active" (click)="onlogout()" routerLink="/">logout
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link">{{user?.email}}</a>
+                </li>
+
+
+            </ul>
+            <ng-template #login>
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/login">login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/registro">registro
+                        </a>
+                    </li>
+
+                </ul>
+
+            </ng-template>
+
+
+        </div>
+    </div>
+</nav>

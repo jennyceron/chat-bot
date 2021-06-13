@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center">welcome to registro</h1>
+                <form [formGroup]="registroForm" (ngSubmit)="onRegistro()">
+                    <label for="id">correo</label>
+                    <div action="form-group">
+                        <input type="text" id="email" class="form-control" formControlName='email'>
+                    </div>
+                    <br>
+                    <label for="password">contraseña</label>
+                    <div action="form-group">
+                        <input type="password" id="password" class="form-control" formControlName='password'>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary center-block">Registro</button>
+                    </div>
+                </form>
+                <div class="form-group mt-3">
+                    <p> do you have a account ?
+                        <a [routerLink]="['/login']">login</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
